@@ -1,0 +1,51 @@
+----------------
+playwright
+----------------
+1. npm init playwright@latest
+2. page.locator('selector);
+3. page.goto('url);
+4. page.locator('selector).click()  or locator.click(); or page.click('selector);
+5. page.locotor('selector).check()
+6. page.locotor('selector).uncheck()
+7. page.locator('selector).fill('text')// enter the text into text box
+8. page.locotor('selector).selectoptions(visible text)
+9. page.locotor('selector).selectoptions(value)
+10.page.locotor('selector).selectoptions({index:number})
+11.page.locotor('selector).selectoptions([value1,value2 ......])
+12.page.$eval('selector,function)// return single value
+13.page.$$eval('selector,function)//return  more than one value
+14. page.locator('selector').textcontent()// text of an element
+15. page.title();
+16. page.url()///return current url
+17. 
+
+-----------------------
+execution related commands
+-------------------------
+1. npx playwrignt test // all test execution in single run
+2. npx playwrignt test test-name //specific test execution
+3. npx playwrignt test test-name --headed //test headless mode
+
+-------------------------------------
+framework
+------------------------------------
+1. test('test name',async function({fixture}){});
+2. test.skip('test name',async function({fixture}){}); // skip respective case from execution
+3. test.only('test name',async function({fixture}){}); // execute only this case
+
+4. test.describe('suite name',()=>{
+    test('test name',async function({fixture}){});
+})
+
+5. test.describe('suite name',()=>{
+    test.beforeEach('Nmae-optional', async ({fixture}{}));
+    test('test name',async function({fixture}){});
+    test.afterEach('Nmae-optional', async ({fixture}{}));
+})
+
+-----------------------
+assertion
+-----------------------
+expect(title).toBe('title)// to exact match
+expect(value).toBeTruthy()// boolean value comaprison
+expect(value).toHaveValue('Value')// 
