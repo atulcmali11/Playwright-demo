@@ -18,12 +18,10 @@ test('Frame handling',async function({page}){
      let textMiddle=await bodyLocatorMiddle.textContent();
      console.log(textMiddle);
 
-
      let childframeleft=Topframe.frameLocator("//frame[@name='frame-left']");
      let bodyLocatorLeft= childframeleft.locator('//body');
      let textLeft=await bodyLocatorLeft.textContent();
      console.log(textLeft);
-
 
      let childframeRight=Topframe.frameLocator("//frame[@name='frame-right']");
      let bodyLocatorRight= childframeRight.locator('//body');
