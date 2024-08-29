@@ -13,6 +13,10 @@ test("Mouse event demo",async function({page}){
     await expect(value2.includes("Hello World!")).toBeTruthy();
 
     console.log(value1,value2);
+
+    let text=await page.getByRole("button",{name:'Submit'}).hover();
+    console.log(text);
+    
     
 
      
