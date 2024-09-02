@@ -8,3 +8,5 @@ test("File upload",async function({page}){
    await page.locator("#file-upload").setInputFiles(file1);
    await page.pause();
 })
+
+
